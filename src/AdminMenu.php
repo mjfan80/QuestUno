@@ -35,7 +35,7 @@ final class AdminMenu {
 		add_menu_page(
 			__( 'QuestUno', 'questuno' ),
 			__( 'QuestUno', 'questuno' ),
-			'edit_posts',
+			'manage_options',
 			'questuno',
 			$this->dashboard_callback,
 			'dashicons-location-alt',

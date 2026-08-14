@@ -93,6 +93,13 @@ final class CheckpointController {
 
 		$path_id    = absint( wp_unslash( $_POST['questuno_path_id'] ) );
 		$group_id   = isset( $_POST['questuno_group_id'] ) ? absint( wp_unslash( $_POST['questuno_group_id'] ) ) : 0;
+		$path       = 0 === $path_id ? null : $this->path_service->get_path( $path_id );
+		$group      = 0 === $group_id ? null : $this->group_service->get_group( $group_id );
+
+		if ( null === $path || ! current_user_can( 'edit_post', (int) $path->get_post_id() ) || ( 0 !== $group_id && ( null === $group || $path_id !== (int) $group->get_path_id() ) ) ) {
+			return;
+		}
+
 		$checkpoint = new Checkpoint();
 
 		$checkpoint->set_post_id( $post_id );

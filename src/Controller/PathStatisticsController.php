@@ -60,14 +60,12 @@ final class PathStatisticsController {
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only Path identifier used only to render aggregate statistics; this request does not change data.
 		$path_id = isset( $_GET['path_id'] ) ? absint( wp_unslash( $_GET['path_id'] ) ) : 0;
 		$path    = 0 === $path_id ? null : $this->path_service->get_path( $path_id );
+
+		if ( null === $path || ! current_user_can( 'edit_post', (int) $path->get_post_id() ) ) {
+			wp_die( esc_html__( 'Invalid request.', 'questuno' ) );
+		}
 		?>
 		<div class="wrap">
-			<?php if ( null === $path ) : ?>
-				<h1><?php esc_html_e( 'Path Statistics', 'questuno' ); ?></h1>
-				<div class="notice notice-error"><p><?php esc_html_e( 'The requested Path could not be found.', 'questuno' ); ?></p></div>
-				<?php return; ?>
-			<?php endif; ?>
-
 			<?php /* translators: %s: Path name. */ ?>
 			<h1><?php echo esc_html( sprintf( __( 'Path Statistics: %s', 'questuno' ), $path->get_name() ) ); ?></h1>
 			<p><a href="<?php echo esc_url( admin_url( 'edit.php?post_type=' . PathPostType::POST_TYPE ) ); ?>"><?php esc_html_e( 'Back to Paths', 'questuno' ); ?></a></p>

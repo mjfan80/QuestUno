@@ -132,11 +132,19 @@ final class GroupController {
 	}
 
 	public function save(): void {
-		if ( ! current_user_can( 'edit_posts' ) || ! isset( $_POST['questuno_group_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['questuno_group_nonce'] ) ), 'questuno_save_group' ) ) {
+		if ( ! isset( $_POST['questuno_group_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['questuno_group_nonce'] ) ), 'questuno_save_group' ) ) {
 			wp_die( esc_html__( 'Invalid request.', 'questuno' ) );
 		}
 
 		$group_id = isset( $_POST['group_id'] ) ? absint( wp_unslash( $_POST['group_id'] ) ) : 0;
+		$path_id  = absint( wp_unslash( $_POST['path_id'] ?? 0 ) );
+		$path     = 0 === $path_id ? null : $this->path_service->get_path( $path_id );
+		$existing_group = 0 === $group_id ? null : $this->group_service->get_group( $group_id );
+
+		if ( null === $path || ! current_user_can( 'edit_post', (int) $path->get_post_id() ) || ( 0 !== $group_id && ( null === $existing_group || ! $this->can_edit_path( (int) $existing_group->get_path_id() ) ) ) ) {
+			wp_die( esc_html__( 'Invalid request.', 'questuno' ) );
+		}
+
 		$raw_completion_mode = isset( $_POST['completion_mode'] ) ? sanitize_key( wp_unslash( $_POST['completion_mode'] ) ) : 'all';
 		$completion_mode = in_array( strtoupper( $raw_completion_mode ), array( 'ALL', 'ANY' ), true ) ? strtoupper( $raw_completion_mode ) : 'ALL';
 		$group    = new Group();
@@ -145,7 +153,7 @@ final class GroupController {
 			$group->set_id( $group_id );
 		}
 
-		$group->set_path_id( absint( wp_unslash( $_POST['path_id'] ?? 0 ) ) );
+		$group->set_path_id( $path_id );
 		$group->set_name( sanitize_text_field( wp_unslash( $_POST['name'] ?? '' ) ) );
 		$group->set_description( sanitize_textarea_field( wp_unslash( $_POST['description'] ?? '' ) ) );
 		$group->set_completion_mode( $completion_mode );
@@ -158,8 +166,9 @@ final class GroupController {
 
 	public function delete(): void {
 		$id = absint( wp_unslash( $_POST['group_id'] ?? 0 ) );
+		$group = 0 === $id ? null : $this->group_service->get_group( $id );
 
-		if ( ! current_user_can( 'edit_posts' ) || ! isset( $_POST['questuno_group_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['questuno_group_nonce'] ) ), 'questuno_delete_group_' . $id ) ) {
+		if ( null === $group || ! $this->can_edit_path( (int) $group->get_path_id() ) || ! isset( $_POST['questuno_group_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['questuno_group_nonce'] ) ), 'questuno_delete_group_' . $id ) ) {
 			wp_die( esc_html__( 'Invalid request.', 'questuno' ) );
 		}
 
@@ -177,5 +186,11 @@ final class GroupController {
 		}
 
 		return $path_names;
+	}
+
+	private function can_edit_path( int $path_id ): bool {
+		$path = $this->path_service->get_path( $path_id );
+
+		return null !== $path && current_user_can( 'edit_post', (int) $path->get_post_id() );
 	}
 }

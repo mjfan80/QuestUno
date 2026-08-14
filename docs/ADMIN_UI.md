@@ -208,7 +208,7 @@ Dimensione, livello di correzione e logo non sono configurabili nella versione 1
 
 ## Internazionalizzazione
 
-QuestUno utilizza il locale nativo di WordPress. Non dispone di un selettore di lingua proprietario. La versione 1.0 viene distribuita con inglese come lingua sorgente e traduzione italiana inclusa.
+QuestUno utilizza il locale nativo di WordPress. Non dispone di un selettore di lingua proprietario. La release WordPress.org include l'inglese come lingua sorgente; la traduzione italiana resta nel repository per la successiva importazione su translate.wordpress.org, che distribuisce i language pack separatamente.
 
 ---
 

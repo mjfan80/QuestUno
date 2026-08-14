@@ -58,7 +58,7 @@ final class EventController {
 			'questuno',
 			__( 'Events', 'questuno' ),
 			__( 'Events', 'questuno' ),
-			'edit_posts',
+			'manage_options',
 			'questuno-events',
 			array( $this, 'render_page' )
 		);

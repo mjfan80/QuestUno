@@ -72,7 +72,7 @@ final class ParticipationController {
 			'questuno',
 			__( 'Participations', 'questuno' ),
 			__( 'Participations', 'questuno' ),
-			'edit_posts',
+			'manage_options',
 			'questuno-participations',
 			array( $this, 'render_page' )
 		);
@@ -202,8 +202,10 @@ final class ParticipationController {
 	 */
 	public function cancel(): void {
 		$id = absint( wp_unslash( $_POST['participation_id'] ?? 0 ) );
+		$participation = 0 === $id ? null : $this->participation_service->get_participation( $id );
+		$path          = null === $participation ? null : $this->path_service->get_path( (int) $participation->get_path_id() );
 
-		if ( ! current_user_can( 'edit_posts' ) || ! isset( $_POST['questuno_participation_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['questuno_participation_nonce'] ) ), 'questuno_cancel_participation_' . $id ) ) {
+		if ( ! current_user_can( 'manage_options' ) || null === $participation || null === $path || ! current_user_can( 'edit_post', (int) $path->get_post_id() ) || ! isset( $_POST['questuno_participation_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['questuno_participation_nonce'] ) ), 'questuno_cancel_participation_' . $id ) ) {
 			wp_die( esc_html__( 'Invalid request.', 'questuno' ) );
 		}
 

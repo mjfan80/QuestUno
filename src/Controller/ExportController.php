@@ -63,7 +63,7 @@ final class ExportController {
 			'questuno',
 			__( 'Exports', 'questuno' ),
 			__( 'Exports', 'questuno' ),
-			'edit_posts',
+			'manage_options',
 			'questuno-exports',
 			array( $this, 'render_page' )
 		);
@@ -152,7 +152,7 @@ final class ExportController {
 	 * @return void
 	 */
 	public function download(): void {
-		if ( ! current_user_can( 'edit_posts' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_die( esc_html__( 'Invalid request.', 'questuno' ) );
 		}
 
