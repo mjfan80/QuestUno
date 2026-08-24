@@ -1,5 +1,14 @@
-# QuestUno
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/mjfan80/QuestUno/main/.github/assets/banner-772x250.png"
+    alt="QuestUno"
+    width="772"
+  >
+</p>
 
+<p align="center">
+  Interactive QR code checkpoints and progression engine for WordPress.
+</p>
 QuestUno è un plugin open source per WordPress che permette di creare esperienze interattive basate su QR Code.
 
 Pur nascendo dall'idea della classica caccia al tesoro, il progetto è stato progettato per essere completamente generico e adattabile a numerosi contesti, tra cui:
