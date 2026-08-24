@@ -263,14 +263,14 @@ msgstr "Duplicato"
 #: src/Controller/ExportController.php:270
 #: src/Controller/ParticipationController.php:334
 msgid "Before Failed"
-msgstr "Vincolo «PRIMA» violato"
+msgstr "PRIMA non soddisfatto"
 
 #: src/Controller/DashboardController.php:137
 #: src/Controller/EventController.php:209
 #: src/Controller/ExportController.php:271
 #: src/Controller/ParticipationController.php:335
 msgid "After Failed"
-msgstr "Prerequisito non soddisfatto"
+msgstr "DOPO non soddisfatto"
 
 #: src/Controller/DashboardController.php:138
 #: src/Controller/EventController.php:210
@@ -380,7 +380,7 @@ msgstr "Esporta eventi CSV"
 #: src/Controller/PathStatisticsController.php:47
 #: src/Controller/PathStatisticsController.php:66
 msgid "Path Statistics"
-msgstr "Statistiche percorso"
+msgstr "Statistiche del percorso"
 
 #: src/Controller/ExportController.php:143
 msgid "Export Path Statistics CSV"
@@ -555,7 +555,7 @@ msgstr "Annulla"
 
 #: src/Controller/ParticipationController.php:227
 msgid "Participation detail"
-msgstr "Dettaglio partecipazione"
+msgstr "Dettaglio della partecipazione"
 
 #: src/Controller/ParticipationController.php:233
 msgid "Created at"
@@ -589,7 +589,7 @@ msgstr "Punto di controllo finale"
 
 #: src/Controller/PathController.php:131
 msgid "Save this Path and assign Checkpoints to it before selecting start and finish Checkpoints."
-msgstr "Salva questo percorso e assegna i punti di controllo prima di selezionare quelli iniziale e finale."
+msgstr "Salva questo percorso e assegnagli i punti di controllo prima di selezionare quello iniziale e quello finale."
 
 #: src/Controller/PlayerFlowController.php:108
 #: src/Controller/PlayerFlowController.php:132
@@ -762,7 +762,7 @@ msgstr "Elenco percorsi"
 
 #: templates/public-checkpoint.php:41
 msgid "Path progress"
-msgstr "Avanzamento percorso"
+msgstr "Avanzamento del percorso"
 
 #: templates/public-checkpoint.php:48
 msgid "Validation outcome:"
@@ -774,11 +774,11 @@ msgstr "Stato partecipazione:"
 
 #: templates/public-checkpoint.php:62
 msgid "Validation details"
-msgstr "Dettagli validazione"
+msgstr "Dettagli della validazione"
 
 #: templates/public-checkpoint.php:78
 msgid "Player navigation"
-msgstr "Navigazione giocatore"
+msgstr "Navigazione del giocatore"
 
 #: templates/public-my-paths.php:23
 msgid "You do not have any active paths yet."
@@ -806,7 +806,7 @@ msgstr "Data di chiusura"
 
 #: src/Controller/PathController.php:447
 msgid "The Path was saved as a draft because its configuration is not publishable."
-msgstr "Il Percorso è stato salvato come bozza perché la sua configurazione non è pubblicabile."
+msgstr "Il percorso è stato salvato come bozza perché la sua configurazione non è pubblicabile."
 
 #: src/Controller/SettingsController.php:33
 #: src/Controller/SettingsController.php:34
@@ -823,15 +823,15 @@ msgstr "Privacy"
 
 #: src/Controller/SettingsController.php:114
 msgid "Event data"
-msgstr "Dati degli Eventi"
+msgstr "Dati degli eventi"
 
 #: src/Controller/SettingsController.php:118
 msgid "Record IP address for new Events"
-msgstr "Registra l'indirizzo IP per i nuovi Eventi"
+msgstr "Registra l'indirizzo IP per i nuovi eventi"
 
 #: src/Controller/SettingsController.php:123
 msgid "Record User Agent for new Events"
-msgstr "Registra lo User Agent per i nuovi Eventi"
+msgstr "Registra lo user agent per i nuovi eventi"
 
 #: src/Service/DashboardService.php:70
 msgid "Active Paths"
@@ -858,23 +858,23 @@ msgstr "Scansioni duplicate"
 
 #: src/Service/PathConfigurationValidator.php:65
 msgid "The Path must be saved before it can be published."
-msgstr "Il Percorso deve essere salvato prima di poter essere pubblicato."
+msgstr "Il percorso deve essere salvato prima di poter essere pubblicato."
 
 #: src/Service/PathConfigurationValidator.php:91
 msgid "A Path must have a start Checkpoint belonging to the Path."
-msgstr "Un Percorso deve avere un Checkpoint iniziale appartenente al Percorso."
+msgstr "Un percorso deve avere un punto di controllo iniziale appartenente al percorso."
 
 #: src/Service/PathConfigurationValidator.php:97
 msgid "A Path must have a finish Checkpoint belonging to the Path."
-msgstr "Un Percorso deve avere un Checkpoint finale appartenente al Percorso."
+msgstr "Un percorso deve avere un punto di controllo finale appartenente al percorso."
 
 #: src/Service/PathConfigurationValidator.php:103
 msgid "The start and finish Checkpoints must be different."
-msgstr "Il Checkpoint iniziale e quello finale devono essere diversi."
+msgstr "Il punto di controllo iniziale e quello finale devono essere diversi."
 
 #: src/Service/PathConfigurationValidator.php:139
 msgid "The Path dependencies contain a cycle."
-msgstr "Le dipendenze del Percorso contengono un ciclo."
+msgstr "Le dipendenze del percorso contengono un ciclo."
 
 #: src/Service/PathConfigurationValidator.php:185
 msgid "A dependency has an invalid target."
@@ -882,7 +882,7 @@ msgstr "Una dipendenza ha una destinazione non valida."
 
 #: src/Service/PathConfigurationValidator.php:191
 msgid "A dependency references a Checkpoint that does not belong to this Path."
-msgstr "Una dipendenza fa riferimento a un Checkpoint che non appartiene a questo Percorso."
+msgstr "Una dipendenza fa riferimento a un punto di controllo che non appartiene a questo percorso."
 
 #: src/Service/PathConfigurationValidator.php:199
 msgid "A dependency has an invalid target type."
@@ -890,7 +890,7 @@ msgstr "Una dipendenza ha un tipo di destinazione non valido."
 
 #: src/Service/PathConfigurationValidator.php:206
 msgid "A dependency references a Group that does not belong to this Path."
-msgstr "Una dipendenza fa riferimento a un Gruppo che non appartiene a questo Percorso."
+msgstr "Una dipendenza fa riferimento a un gruppo che non appartiene a questo percorso."
 
 #: src/Controller/PathController.php:261
 msgid "Archive"
@@ -914,7 +914,7 @@ msgstr "Punto e virgola (;)"
 
 #: src/Controller/SettingsController.php:136
 msgid "Tab"
-msgstr "Tabulazione"
+msgstr "Tab"
 
 #: src/Controller/SettingsController.php:138
 msgid "CSV exports are always encoded in UTF-8."
@@ -935,7 +935,7 @@ msgstr[1] "Archiviati <span class=\"count\">(%s)</span>"
 
 #: src/Controller/EventController.php:156
 msgid "No Events recorded yet."
-msgstr "Nessun Evento registrato."
+msgstr "Nessun evento registrato."
 
 #: src/Controller/PathController.php:64
 msgid "Configuration check"
@@ -943,15 +943,15 @@ msgstr "Verifica configurazione"
 
 #: src/Controller/PathController.php:148
 msgid "Save this Path before running its configuration check."
-msgstr "Salva questo Percorso prima di eseguire la verifica della configurazione."
+msgstr "Salva questo percorso prima di eseguire la verifica della configurazione."
 
 #: src/Controller/PathController.php:157
 msgid "This Path configuration can be published."
-msgstr "La configurazione di questo Percorso può essere pubblicata."
+msgstr "La configurazione di questo percorso può essere pubblicata."
 
 #: src/Controller/PathController.php:159
 msgid "This Path configuration cannot be published."
-msgstr "La configurazione di questo Percorso non può essere pubblicata."
+msgstr "La configurazione di questo percorso non può essere pubblicata."
 
 #: src/Controller/PathController.php:163
 msgid "Checks passed"
@@ -1002,13 +1002,13 @@ msgstr "%1$s · %2$s"
 
 #: src/Controller/PathStatisticsController.php:67
 msgid "The requested Path could not be found."
-msgstr "Il Percorso richiesto non è stato trovato."
+msgstr "Il percorso richiesto non è stato trovato."
 
 #. translators: %s: Path name.
 #: src/Controller/PathStatisticsController.php:72
 #, php-format
 msgid "Path Statistics: %s"
-msgstr "Statistiche del Percorso: %s"
+msgstr "Statistiche del percorso: %s"
 
 #: src/Controller/PathStatisticsController.php:73
 msgid "Back to Paths"
@@ -1040,25 +1040,25 @@ msgstr "Scansioni accettate"
 
 #: src/Service/PathConfigurationValidator.php:93
 msgid "The start Checkpoint belongs to this Path."
-msgstr "Il Checkpoint iniziale appartiene a questo Percorso."
+msgstr "Il punto di controllo iniziale appartiene a questo percorso."
 
 #: src/Service/PathConfigurationValidator.php:99
 msgid "The finish Checkpoint belongs to this Path."
-msgstr "Il Checkpoint finale appartiene a questo Percorso."
+msgstr "Il punto di controllo finale appartiene a questo percorso."
 
 #: src/Service/PathConfigurationValidator.php:105
 msgid "The start and finish Checkpoints are different."
-msgstr "I Checkpoint iniziale e finale sono diversi."
+msgstr "I punti di controllo iniziale e finale sono diversi."
 
 #: src/Service/PathConfigurationValidator.php:135
 msgid "All dependency targets and Groups belong to this Path."
-msgstr "Tutte le destinazioni delle dipendenze e i Gruppi appartengono a questo Percorso."
+msgstr "Tutte le destinazioni delle dipendenze e i gruppi appartengono a questo percorso."
 
 #: src/Service/PathConfigurationValidator.php:141
 msgid "The Path dependencies do not contain cycles."
-msgstr "Le dipendenze del Percorso non contengono cicli."
+msgstr "Le dipendenze del percorso non contengono cicli."
 
 #: src/Service/PathConfigurationValidator.php:158
 #, php-format
 msgid "The Checkpoint \"%s\" has no dependencies and can be validated independently."
-msgstr "Il Checkpoint \"%s\" non ha dipendenze e può essere validato indipendentemente."
+msgstr "Il punto di controllo \"%s\" non ha dipendenze e può essere validato indipendentemente."
