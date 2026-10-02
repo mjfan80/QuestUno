@@ -310,7 +310,7 @@ final class QrCodeController {
 			'questuno-print-path',
 			plugins_url( 'assets/css/print-path.css', $plugin_file ),
 			array(),
-			'1.0.0'
+			'1.0.1'
 		);
 		wp_enqueue_style( 'questuno-print-path' );
 
@@ -318,7 +318,7 @@ final class QrCodeController {
 			'questuno-print-path',
 			plugins_url( 'assets/js/print-path.js', $plugin_file ),
 			array(),
-			'1.0.0',
+			'1.0.1',
 			false
 		);
 		wp_enqueue_script( 'questuno-print-path' );

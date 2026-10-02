@@ -186,6 +186,7 @@ final class PathController {
 		$path->set_status( $post->post_status );
 
 		if ( null !== $stored_path ) {
+			$path->set_id( $stored_path->get_id() );
 			$path->set_start_checkpoint_id( $stored_path->get_start_checkpoint_id() );
 			$path->set_finish_checkpoint_id( $stored_path->get_finish_checkpoint_id() );
 			$path->set_opening_date( $stored_path->get_opening_date() );

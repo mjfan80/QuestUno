@@ -40,8 +40,8 @@ final class CheckpointController {
 			return;
 		}
 
-		wp_enqueue_style( 'questuno-admin-ui', plugins_url( 'assets/css/admin-ui.css', dirname( __DIR__, 2 ) . '/questuno.php' ), array(), '1.0.0' );
-		wp_enqueue_script( 'questuno-checkpoint-metabox', plugins_url( 'assets/js/checkpoint-metabox.js', dirname( __DIR__, 2 ) . '/questuno.php' ), array(), '1.0.0', true );
+		wp_enqueue_style( 'questuno-admin-ui', plugins_url( 'assets/css/admin-ui.css', dirname( __DIR__, 2 ) . '/questuno.php' ), array(), '1.0.1' );
+		wp_enqueue_script( 'questuno-checkpoint-metabox', plugins_url( 'assets/js/checkpoint-metabox.js', dirname( __DIR__, 2 ) . '/questuno.php' ), array(), '1.0.1', true );
 		wp_localize_script(
 			'questuno-checkpoint-metabox',
 			'questunoCheckpointMetabox',
