@@ -2,7 +2,7 @@
 /**
  * Plugin Name: QuestUno
  * Description: Creates interactive experiences based on QR Code checkpoints.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Requires at least: 6.7
  * Requires PHP: 8.2
  * Author: mjfan80

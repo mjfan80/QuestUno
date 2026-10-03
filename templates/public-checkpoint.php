@@ -24,6 +24,16 @@ $questuno_progress_label     = isset( $questuno_context['progress_label'] ) ? (s
 $questuno_my_paths_url       = isset( $questuno_context['my_paths_url'] ) ? (string) $questuno_context['my_paths_url'] : '';
 $questuno_render_navigation  = ! empty( $questuno_context['render_navigation'] );
 $questuno_checkpoint_content = isset( $questuno_context['checkpoint_content'] ) ? (string) $questuno_context['checkpoint_content'] : '';
+$questuno_is_path_in_progress = $questuno_participation instanceof \QuestUno\Model\Participation
+	&& \QuestUno\Model\ParticipationStatus::IN_PROGRESS === $questuno_participation->get_status()
+	&& '' !== $questuno_path_name;
+$questuno_path_status_label = $questuno_is_path_in_progress
+	? sprintf(
+		/* translators: %s: Path name. */
+		__( 'Path “%s” in progress', 'questuno' ),
+		$questuno_path_name
+	)
+	: $questuno_participation_status_label;
 
 get_header();
 ?>
@@ -31,31 +41,35 @@ get_header();
 	<div class="questuno-public-checkpoint__content">
 		<h1><?php echo esc_html( $questuno_page_title ); ?></h1>
 
-		<?php if ( '' !== $questuno_banner_message ) : ?>
-			<div class="questuno-public-ui__notice questuno-public-ui__notice--<?php echo esc_attr( $questuno_banner_modifier ); ?>">
-				<p><?php echo esc_html( $questuno_banner_message ); ?></p>
-			</div>
-		<?php endif; ?>
+		<?php if ( '' !== $questuno_banner_message || '' !== $questuno_progress_label || null !== $questuno_participation ) : ?>
+			<section class="questuno-public-ui__status-card" aria-label="<?php esc_attr_e( 'Path progress', 'questuno' ); ?>">
+				<?php if ( '' !== $questuno_banner_message ) : ?>
+					<div class="questuno-public-ui__notice questuno-public-ui__notice--<?php echo esc_attr( $questuno_banner_modifier ); ?>">
+						<p><?php echo esc_html( $questuno_banner_message ); ?></p>
+					</div>
+				<?php endif; ?>
 
-		<?php if ( '' !== $questuno_progress_label ) : ?>
-			<section class="questuno-public-ui__progress" aria-label="<?php esc_attr_e( 'Path progress', 'questuno' ); ?>">
-				<p class="questuno-public-ui__progress-title"><?php echo esc_html( $questuno_path_name ); ?></p>
-				<p class="questuno-public-ui__progress-value"><?php echo esc_html( $questuno_progress_label ); ?></p>
+				<?php if ( '' !== $questuno_path_name && ! $questuno_is_path_in_progress ) : ?>
+					<p class="questuno-public-ui__progress-title"><?php echo esc_html( $questuno_path_name ); ?></p>
+				<?php endif; ?>
+
+				<?php if ( '' !== $questuno_progress_label ) : ?>
+					<p class="questuno-public-ui__progress-value"><?php echo esc_html( $questuno_progress_label ); ?></p>
+				<?php endif; ?>
+
+				<?php if ( null !== $questuno_participation ) : ?>
+					<p class="questuno-public-ui__participation-status"><?php echo esc_html( $questuno_path_status_label ); ?></p>
+				<?php endif; ?>
 			</section>
 		<?php endif; ?>
 
-		<?php if ( '' !== $questuno_validation_outcome ) : ?>
-			<p><strong><?php esc_html_e( 'Validation outcome:', 'questuno' ); ?></strong> <?php echo esc_html( $questuno_validation_outcome ); ?></p>
+		<?php if ( '' === $questuno_banner_message && '' !== $questuno_validation_outcome ) : ?>
+			<p class="questuno-public-ui__validation-outcome"><?php echo esc_html( $questuno_validation_outcome ); ?></p>
 		<?php endif; ?>
 
 		<?php if ( '' !== $questuno_message ) : ?>
-			<p><?php echo esc_html( $questuno_message ); ?></p>
+			<p class="questuno-public-ui__message"><?php echo esc_html( $questuno_message ); ?></p>
 		<?php endif; ?>
-
-		<p>
-			<strong><?php esc_html_e( 'Participation status:', 'questuno' ); ?></strong>
-			<?php echo esc_html( $questuno_participation_status_label ); ?>
-		</p>
 
 		<?php if ( ! empty( $questuno_violation_messages ) ) : ?>
 			<section class="questuno-public-checkpoint__violations">
