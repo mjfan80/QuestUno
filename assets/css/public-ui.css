@@ -4,3 +4,70 @@
 	margin: 2rem auto;
 	padding: 0 1rem;
 }
+
+.questuno-public-checkpoint__content {
+	display: grid;
+	gap: 1.25rem;
+}
+
+.questuno-public-checkpoint__content > h1 {
+	margin: 0;
+}
+
+.questuno-public-ui__status-card,
+.questuno-public-checkpoint__body {
+	border: 1px solid currentColor;
+	border-color: color-mix( in srgb, currentColor 20%, transparent );
+	border-radius: 0.5rem;
+	padding: 1.25rem;
+}
+
+.questuno-public-ui__status-card {
+	display: grid;
+	gap: 0.5rem;
+}
+
+.questuno-public-ui__notice p,
+.questuno-public-ui__progress-title,
+.questuno-public-ui__progress-value,
+.questuno-public-ui__participation-status,
+.questuno-public-ui__validation-outcome,
+.questuno-public-ui__message {
+	margin: 0;
+}
+
+.questuno-public-ui__notice {
+	font-weight: 600;
+}
+
+.questuno-public-ui__progress-title {
+	margin-top: 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 600;
+}
+
+.questuno-public-ui__participation-status {
+	font-size: 0.9375rem;
+}
+
+.questuno-public-checkpoint__body {
+	padding: 1.5rem;
+	font-size: 1.125rem;
+	line-height: 1.6;
+}
+
+.questuno-public-checkpoint__body > :first-child {
+	margin-top: 0;
+}
+
+.questuno-public-checkpoint__body > :last-child {
+	margin-bottom: 0;
+}
+
+.questuno-public-ui__navigation {
+	margin-top: 0.25rem;
+}
+
+.questuno-public-ui__my-paths-link {
+	display: inline-block;
+}
