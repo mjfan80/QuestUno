@@ -4,7 +4,7 @@ Tags: qr code, treasure hunt, game, education, events
 Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,19 +57,26 @@ Yes. QuestUno 1.0.0 is the first stable release.
 
 == Changelog ==
 
+= 1.0.2 =
+* Improved the public Checkpoint interface.
+* Separated game status information from Checkpoint editorial content.
+* Improved player-facing status wording.
+* Added consistent repository line-ending rules.
+
 = 1.0.1 =
 
 * Fix Path publication validation when publishing an already saved and valid Path.
 
 = 1.0.0 =
-
 * First stable release of QuestUno.
 
 = 0.1.0 =
-
 * Initial development release.
 
 == Upgrade Notice ==
+
+= 1.0.2 =
+Improves the public Checkpoint experience with clearer status information and better separation of game data from Checkpoint content.
 
 = 1.0.1 =
 
