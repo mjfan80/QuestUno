@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: QuestUno 1.0.1\n"
+"Project-Id-Version: QuestUno 1.0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -135,7 +135,7 @@ msgid "Checkpoints list"
 msgstr "Elenco punti di controllo"
 
 #: src/Controller/CheckpointController.php:33
-#: src/Controller/CheckpointController.php:44
+#: src/Controller/CheckpointController.php:63
 #: src/Controller/DashboardController.php:97
 #: src/Controller/EventController.php:105
 #: src/Controller/EventController.php:149
@@ -144,35 +144,35 @@ msgstr "Elenco punti di controllo"
 #: src/Controller/GroupController.php:103
 #: src/Controller/ParticipationController.php:116
 #: src/Controller/ParticipationController.php:153
-#: src/Controller/ParticipationController.php:231
+#: src/Controller/ParticipationController.php:233
 #: src/Controller/PlayerFlowController.php:449
 #: src/Controller/QrCodeController.php:81
 #: templates/public-my-paths.php:28
 msgid "Path"
 msgstr "Percorso"
 
-#: src/Controller/CheckpointController.php:46
+#: src/Controller/CheckpointController.php:65
 #: src/Controller/GroupController.php:57
 #: src/Controller/QrCodeController.php:85
 msgid "Select a Path"
 msgstr "Seleziona un percorso"
 
-#: src/Controller/CheckpointController.php:52
-#: src/Controller/DependencyController.php:224
+#: src/Controller/CheckpointController.php:71
+#: src/Controller/DependencyController.php:126
 msgid "Group"
 msgstr "Gruppo"
 
-#: src/Controller/CheckpointController.php:54
-#: src/Controller/CheckpointController.php:83
+#: src/Controller/CheckpointController.php:50
+#: src/Controller/CheckpointController.php:73
 msgid "No Group"
 msgstr "Nessun gruppo"
 
-#: src/Controller/CheckpointController.php:58
+#: src/Controller/CheckpointController.php:77
 #: src/Controller/QrCodeController.php:110
 msgid "Token"
 msgstr "Token"
 
-#: src/Controller/CheckpointController.php:61
+#: src/Controller/CheckpointController.php:80
 msgid "The token will be generated when the Checkpoint is first saved."
 msgstr "Il token verrà generato al primo salvataggio del punto di controllo."
 
@@ -193,7 +193,7 @@ msgid "Item"
 msgstr "Elemento"
 
 #: src/Controller/DashboardController.php:58
-#: src/Controller/PathStatisticsController.php:76
+#: src/Controller/PathStatisticsController.php:74
 msgid "Count"
 msgstr "Conteggio"
 
@@ -216,16 +216,16 @@ msgstr "Ultime scansioni"
 
 #: src/Controller/DashboardController.php:96
 #: src/Controller/EventController.php:147
-#: src/Controller/ParticipationController.php:244
+#: src/Controller/ParticipationController.php:246
 msgid "Date"
 msgstr "Data"
 
 #: src/Controller/DashboardController.php:98
-#: src/Controller/DependencyController.php:223
+#: src/Controller/DependencyController.php:125
 #: src/Controller/EventController.php:121
 #: src/Controller/EventController.php:150
 #: src/Controller/ExportController.php:114
-#: src/Controller/ParticipationController.php:245
+#: src/Controller/ParticipationController.php:247
 #: src/Controller/PlayerFlowController.php:427
 #: src/Controller/PlayerFlowController.php:486
 #: templates/public-checkpoint.php:13
@@ -236,7 +236,7 @@ msgstr "Punto di controllo"
 #: src/Controller/EventController.php:130
 #: src/Controller/EventController.php:152
 #: src/Controller/ExportController.php:123
-#: src/Controller/ParticipationController.php:247
+#: src/Controller/ParticipationController.php:249
 msgid "Result"
 msgstr "Esito"
 
@@ -247,42 +247,42 @@ msgstr "Nessuna scansione registrata."
 #: src/Controller/DashboardController.php:134
 #: src/Controller/EventController.php:206
 #: src/Controller/ExportController.php:268
-#: src/Controller/ParticipationController.php:332
+#: src/Controller/ParticipationController.php:334
 msgid "Accepted"
 msgstr "Accettato"
 
 #: src/Controller/DashboardController.php:135
 #: src/Controller/EventController.php:207
 #: src/Controller/ExportController.php:269
-#: src/Controller/ParticipationController.php:333
+#: src/Controller/ParticipationController.php:335
 msgid "Duplicate"
 msgstr "Duplicato"
 
 #: src/Controller/DashboardController.php:136
 #: src/Controller/EventController.php:208
 #: src/Controller/ExportController.php:270
-#: src/Controller/ParticipationController.php:334
+#: src/Controller/ParticipationController.php:336
 msgid "Before Failed"
 msgstr "PRIMA non soddisfatto"
 
 #: src/Controller/DashboardController.php:137
 #: src/Controller/EventController.php:209
 #: src/Controller/ExportController.php:271
-#: src/Controller/ParticipationController.php:335
+#: src/Controller/ParticipationController.php:337
 msgid "After Failed"
 msgstr "DOPO non soddisfatto"
 
 #: src/Controller/DashboardController.php:138
 #: src/Controller/EventController.php:210
 #: src/Controller/ExportController.php:272
-#: src/Controller/ParticipationController.php:336
+#: src/Controller/ParticipationController.php:338
 msgid "Path Closed"
 msgstr "Percorso chiuso"
 
 #: src/Controller/DashboardController.php:139
 #: src/Controller/EventController.php:211
 #: src/Controller/ExportController.php:273
-#: src/Controller/ParticipationController.php:337
+#: src/Controller/ParticipationController.php:339
 msgid "Participation Cancelled"
 msgstr "Partecipazione annullata"
 
@@ -294,25 +294,25 @@ msgstr "Dipendenze"
 msgid "Add Dependency"
 msgstr "Aggiungi dipendenza"
 
-#: src/Controller/DependencyController.php:219
+#: src/Controller/DependencyController.php:121
 msgid "BEFORE"
 msgstr "PRIMA"
 
-#: src/Controller/DependencyController.php:220
+#: src/Controller/DependencyController.php:122
 msgid "AFTER"
 msgstr "DOPO"
 
-#: src/Controller/DependencyController.php:227
+#: src/Controller/DependencyController.php:129
 #: src/Controller/PathController.php:100
 #: src/Controller/PathController.php:120
 msgid "Select a Checkpoint"
 msgstr "Seleziona un punto di controllo"
 
-#: src/Controller/DependencyController.php:246
+#: src/Controller/DependencyController.php:148
 msgid "Select a Group"
 msgstr "Seleziona un gruppo"
 
-#: src/Controller/DependencyController.php:260
+#: src/Controller/DependencyController.php:162
 #: src/Controller/GroupController.php:123
 msgid "Delete"
 msgstr "Elimina"
@@ -328,7 +328,7 @@ msgstr "Esportazioni"
 #: src/Controller/ParticipationController.php:73
 #: src/Controller/ParticipationController.php:74
 #: src/Controller/ParticipationController.php:112
-#: src/Controller/PathStatisticsController.php:94
+#: src/Controller/PathStatisticsController.php:92
 #: src/Service/DashboardService.php:82
 msgid "Participations"
 msgstr "Partecipazioni"
@@ -336,7 +336,7 @@ msgstr "Partecipazioni"
 #: src/Controller/ExportController.php:97
 #: src/Controller/ParticipationController.php:136
 #: src/Controller/ParticipationController.php:154
-#: src/Controller/ParticipationController.php:232
+#: src/Controller/ParticipationController.php:234
 msgid "Status"
 msgstr "Stato"
 
@@ -378,7 +378,6 @@ msgstr "Esporta eventi CSV"
 #: src/Controller/ExportController.php:137
 #: src/Controller/PathStatisticsController.php:46
 #: src/Controller/PathStatisticsController.php:47
-#: src/Controller/PathStatisticsController.php:66
 msgid "Path Statistics"
 msgstr "Statistiche del percorso"
 
@@ -389,15 +388,15 @@ msgstr "Esporta statistiche percorso CSV"
 #: src/Controller/ExportController.php:156
 #: src/Controller/ExportController.php:201
 #: src/Controller/GroupController.php:136
-#: src/Controller/GroupController.php:163
-#: src/Controller/ParticipationController.php:207
-#: src/Controller/PathController.php:311
-#: src/Controller/PathController.php:317
-#: src/Controller/QrCodeController.php:149
-#: src/Controller/QrCodeController.php:156
-#: src/Controller/QrCodeController.php:162
+#: src/Controller/GroupController.php:145
+#: src/Controller/GroupController.php:172
+#: src/Controller/ParticipationController.php:209
+#: src/Controller/PathController.php:360
+#: src/Controller/PathController.php:366
+#: src/Controller/PathStatisticsController.php:65
+#: src/Controller/QrCodeController.php:152
+#: src/Controller/QrCodeController.php:158
 #: src/Controller/QrCodeController.php:193
-#: src/Controller/QrCodeController.php:200
 msgid "Invalid request."
 msgstr "Richiesta non valida."
 
@@ -413,7 +412,7 @@ msgstr "Tutti i percorsi"
 #: src/Controller/ExportController.php:235
 #: src/Controller/ParticipationController.php:126
 #: src/Controller/ParticipationController.php:152
-#: src/Controller/ParticipationController.php:230
+#: src/Controller/ParticipationController.php:232
 msgid "User"
 msgstr "Utente"
 
@@ -425,28 +424,28 @@ msgstr "Tutti gli utenti"
 
 #: src/Controller/ExportController.php:254
 #: src/Controller/MyPathsController.php:310
-#: src/Controller/ParticipationController.php:307
+#: src/Controller/ParticipationController.php:309
 #: src/Controller/PlayerFlowController.php:554
 msgid "In Progress"
 msgstr "In corso"
 
 #: src/Controller/ExportController.php:255
 #: src/Controller/MyPathsController.php:311
-#: src/Controller/ParticipationController.php:308
+#: src/Controller/ParticipationController.php:310
 #: src/Controller/PlayerFlowController.php:555
 msgid "Finished"
 msgstr "Terminata"
 
 #: src/Controller/ExportController.php:256
 #: src/Controller/MyPathsController.php:312
-#: src/Controller/ParticipationController.php:309
+#: src/Controller/ParticipationController.php:311
 #: src/Controller/PlayerFlowController.php:556
 msgid "Completed"
 msgstr "Completata"
 
 #: src/Controller/ExportController.php:257
 #: src/Controller/MyPathsController.php:313
-#: src/Controller/ParticipationController.php:310
+#: src/Controller/ParticipationController.php:312
 #: src/Controller/PlayerFlowController.php:557
 msgid "Cancelled"
 msgstr "Annullata"
@@ -505,7 +504,7 @@ msgid "Edit"
 msgstr "Modifica"
 
 #: src/Controller/MyPathsController.php:103
-#: templates/public-checkpoint.php:80
+#: templates/public-checkpoint.php:94
 #: templates/public-my-paths.php:13
 msgid "My paths"
 msgstr "I miei percorsi"
@@ -527,17 +526,17 @@ msgid "Filter"
 msgstr "Filtra"
 
 #: src/Controller/ParticipationController.php:155
-#: src/Controller/ParticipationController.php:234
+#: src/Controller/ParticipationController.php:236
 msgid "Started at"
 msgstr "Iniziata il"
 
 #: src/Controller/ParticipationController.php:156
-#: src/Controller/ParticipationController.php:235
+#: src/Controller/ParticipationController.php:237
 msgid "Finished at"
 msgstr "Terminata il"
 
 #: src/Controller/ParticipationController.php:157
-#: src/Controller/ParticipationController.php:236
+#: src/Controller/ParticipationController.php:238
 msgid "Cancelled at"
 msgstr "Annullata il"
 
@@ -553,25 +552,25 @@ msgstr "Visualizza"
 msgid "Cancel"
 msgstr "Annulla"
 
-#: src/Controller/ParticipationController.php:227
+#: src/Controller/ParticipationController.php:229
 msgid "Participation detail"
 msgstr "Dettaglio della partecipazione"
 
-#: src/Controller/ParticipationController.php:233
+#: src/Controller/ParticipationController.php:235
 msgid "Created at"
 msgstr "Creata il"
 
-#: src/Controller/ParticipationController.php:240
+#: src/Controller/ParticipationController.php:242
 msgid "History"
 msgstr "Cronologia"
 
 #: src/Controller/EventController.php:151
-#: src/Controller/ParticipationController.php:246
+#: src/Controller/ParticipationController.php:248
 msgid "Type"
 msgstr "Tipo"
 
 #: src/Controller/EventController.php:217
-#: src/Controller/ParticipationController.php:321
+#: src/Controller/ParticipationController.php:323
 msgid "QR Code scan"
 msgstr "Scansione codice QR"
 
@@ -696,13 +695,9 @@ msgstr "Scarica PNG"
 msgid "Download SVG"
 msgstr "Scarica SVG"
 
-#: src/Controller/QrCodeController.php:168
+#: src/Controller/QrCodeController.php:164
 msgid "Checkpoint not found."
 msgstr "Punto di controllo non trovato."
-
-#: src/Controller/QrCodeController.php:206
-msgid "Path not found."
-msgstr "Percorso non trovato."
 
 #: src/PathPostType.php:74
 msgctxt "Post type general name"
@@ -760,23 +755,15 @@ msgstr "Navigazione elenco percorsi"
 msgid "Paths list"
 msgstr "Elenco percorsi"
 
-#: templates/public-checkpoint.php:41
+#: templates/public-checkpoint.php:45
 msgid "Path progress"
 msgstr "Avanzamento del percorso"
 
-#: templates/public-checkpoint.php:48
-msgid "Validation outcome:"
-msgstr "Esito della validazione:"
-
-#: templates/public-checkpoint.php:56
-msgid "Participation status:"
-msgstr "Stato partecipazione:"
-
-#: templates/public-checkpoint.php:62
+#: templates/public-checkpoint.php:76
 msgid "Validation details"
 msgstr "Dettagli della validazione"
 
-#: templates/public-checkpoint.php:78
+#: templates/public-checkpoint.php:92
 msgid "Player navigation"
 msgstr "Navigazione del giocatore"
 
@@ -804,7 +791,7 @@ msgstr "Data di apertura"
 msgid "Closing date"
 msgstr "Data di chiusura"
 
-#: src/Controller/PathController.php:447
+#: src/Controller/PathController.php:538
 msgid "The Path was saved as a draft because its configuration is not publishable."
 msgstr "Il percorso è stato salvato come bozza perché la sua configurazione non è pubblicabile."
 
@@ -841,17 +828,17 @@ msgstr "Percorsi attivi"
 msgid "Active Participations"
 msgstr "Partecipazioni attive"
 
-#: src/Controller/PathStatisticsController.php:99
+#: src/Controller/PathStatisticsController.php:97
 #: src/Service/DashboardService.php:90
 msgid "Total scans"
 msgstr "Scansioni totali"
 
-#: src/Controller/PathStatisticsController.php:102
+#: src/Controller/PathStatisticsController.php:100
 #: src/Service/DashboardService.php:94
 msgid "Invalid scans"
 msgstr "Scansioni non valide"
 
-#: src/Controller/PathStatisticsController.php:101
+#: src/Controller/PathStatisticsController.php:99
 #: src/Service/DashboardService.php:98
 msgid "Duplicate scans"
 msgstr "Scansioni duplicate"
@@ -892,11 +879,11 @@ msgstr "Una dipendenza ha un tipo di destinazione non valido."
 msgid "A dependency references a Group that does not belong to this Path."
 msgstr "Una dipendenza fa riferimento a un gruppo che non appartiene a questo percorso."
 
-#: src/Controller/PathController.php:261
+#: src/Controller/PathController.php:262
 msgid "Archive"
 msgstr "Archivia"
 
-#: src/Controller/PathController.php:269
+#: src/Controller/PathController.php:270
 msgid "Restore to Draft"
 msgstr "Ripristina come bozza"
 
@@ -965,21 +952,21 @@ msgstr "Errori bloccanti"
 msgid "Warnings"
 msgstr "Avvisi"
 
-#: src/Controller/PathController.php:276
+#: src/Controller/PathController.php:277
 msgid "Statistics"
 msgstr "Statistiche"
 
-#: src/Controller/PathController.php:289
+#: src/Controller/PathController.php:290
 msgid "Configuration"
 msgstr "Configurazione"
 
-#: src/Controller/PathController.php:448
+#: src/Controller/PathController.php:449
 msgid "✓ OK"
 msgstr "✓ OK"
 
 #. translators: %s: number of configuration warnings.
-#: src/Controller/PathController.php:454
-#: src/Controller/PathController.php:475
+#: src/Controller/PathController.php:455
+#: src/Controller/PathController.php:476
 #, php-format
 msgid "⚠ %s warning"
 msgid_plural "⚠ %s warnings"
@@ -987,7 +974,7 @@ msgstr[0] "⚠ %s avviso"
 msgstr[1] "⚠ %s avvisi"
 
 #. translators: %s: number of blocking configuration errors.
-#: src/Controller/PathController.php:461
+#: src/Controller/PathController.php:462
 #, php-format
 msgid "✕ %s error"
 msgid_plural "✕ %s errors"
@@ -995,46 +982,42 @@ msgstr[0] "✕ %s errore"
 msgstr[1] "✕ %s errori"
 
 #. translators: 1: error summary, 2: warning summary.
-#: src/Controller/PathController.php:471
+#: src/Controller/PathController.php:472
 #, php-format
 msgid "%1$s · %2$s"
 msgstr "%1$s · %2$s"
 
-#: src/Controller/PathStatisticsController.php:67
-msgid "The requested Path could not be found."
-msgstr "Il percorso richiesto non è stato trovato."
-
 #. translators: %s: Path name.
-#: src/Controller/PathStatisticsController.php:72
+#: src/Controller/PathStatisticsController.php:70
 #, php-format
 msgid "Path Statistics: %s"
 msgstr "Statistiche del percorso: %s"
 
-#: src/Controller/PathStatisticsController.php:73
+#: src/Controller/PathStatisticsController.php:71
 msgid "Back to Paths"
 msgstr "Torna ai Percorsi"
 
-#: src/Controller/PathStatisticsController.php:76
+#: src/Controller/PathStatisticsController.php:74
 msgid "Metric"
 msgstr "Metrica"
 
-#: src/Controller/PathStatisticsController.php:95
+#: src/Controller/PathStatisticsController.php:93
 msgid "Participations in progress"
 msgstr "Partecipazioni in corso"
 
-#: src/Controller/PathStatisticsController.php:96
+#: src/Controller/PathStatisticsController.php:94
 msgid "Participations finished"
 msgstr "Partecipazioni terminate"
 
-#: src/Controller/PathStatisticsController.php:97
+#: src/Controller/PathStatisticsController.php:95
 msgid "Participations completed"
 msgstr "Partecipazioni completate"
 
-#: src/Controller/PathStatisticsController.php:98
+#: src/Controller/PathStatisticsController.php:96
 msgid "Participations cancelled"
 msgstr "Partecipazioni annullate"
 
-#: src/Controller/PathStatisticsController.php:100
+#: src/Controller/PathStatisticsController.php:98
 msgid "Accepted scans"
 msgstr "Scansioni accettate"
 
@@ -1058,7 +1041,14 @@ msgstr "Tutte le destinazioni delle dipendenze e i gruppi appartengono a questo 
 msgid "The Path dependencies do not contain cycles."
 msgstr "Le dipendenze del percorso non contengono cicli."
 
+#. translators: %s: Checkpoint title.
 #: src/Service/PathConfigurationValidator.php:158
 #, php-format
 msgid "The Checkpoint \"%s\" has no dependencies and can be validated independently."
 msgstr "Il punto di controllo \"%s\" non ha dipendenze e può essere validato indipendentemente."
+
+#. translators: %s: Path name.
+#: templates/public-checkpoint.php:33
+#, php-format
+msgid "Path “%s” in progress"
+msgstr "Percorso “%s” in corso"
